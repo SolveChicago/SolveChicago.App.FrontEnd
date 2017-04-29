@@ -153,6 +153,10 @@ $app-dashboard-top-nav-height: 60px;
     max-width: 360px;
   }
 
+  .line-divider {
+    margin-top: 60px;
+  }
+
   transition: all $offcanvas-transition-length $offcanvas-transition-timing;
   overflow-y: auto;
   flex: 1 1 0;

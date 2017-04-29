@@ -554,7 +554,7 @@ $pagination-arrows: true;
 
 // 27. Progress Bar
 // ----------------
-$progress-height: 1rem;
+$progress-height: rem-calc(12);
 $progress-background: $medium-gray;
 $progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
