@@ -55,6 +55,29 @@ $foundation-palette: (
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
+
+  super-light-blue: #D3E8F6,
+  light-blue: #9DD3F6,
+  blue: #6BB9F0,
+  brand-blue: #22A7F0,
+  royal-blue: #2574A9,
+  dark-blue: #22313F,
+  brand-red: #F22613,
+  dark-red: #CF000F,
+  yellow: #F9BF3B,
+  orange: #F6941E,
+  green: #3FC380,
+  dark-green: #019875,
+  lilac: #BE90D4,
+  purple: #9B07B5,
+  white: #ffffff,
+  offwhite: #ECECEC,
+  light-gray: #e6e6e6,
+  medium-gray: #6C7A89,
+  grey: #394148,
+  dark-gray: #292D30,
+
+  black: #0a0a0a,
 );
 
 $super-light-blue: #D3E8F6;
@@ -80,6 +103,7 @@ $dark-gray: #292D30;
 
 $black: #0a0a0a;
 $primary-color: $brand-blue;
+
 
 
 $body-background: $white;
@@ -290,7 +314,8 @@ $button-sizes: (
   default: 0.9rem,
   large: 1.25rem,
 );
-//$button-palette: $foundation-palette;
+
+$button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
@@ -662,4 +687,3 @@ $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
-

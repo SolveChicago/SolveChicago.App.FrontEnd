@@ -1,5 +1,5 @@
-$app-dashboard-top-nav-color: #2c3840;
-$app-dashboard-top-nav-height: 55px;
+$app-dashboard-top-nav-color: $dark-blue;
+$app-dashboard-top-nav-height: 60px;
 
 .app-dashboard {
   height: 100vh;
@@ -15,11 +15,12 @@ $app-dashboard-top-nav-height: 55px;
 .app-dashboard-top-nav-bar  {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: $app-dashboard-top-nav-color;
   height: $app-dashboard-top-nav-height;
   width: 100%;
   flex: 0 0 $app-dashboard-top-nav-height;
+
   .menu-icon {
     vertical-align: text-bottom;
   }
@@ -29,6 +30,11 @@ $app-dashboard-top-nav-height: 55px;
   color: $white;
   text-transform: uppercase;
   font-weight: bold;
+  img {
+    height: 100%;
+  max-height: 40px;
+  width: auto;
+  }
 }
 
 .app-dashboard-search-bar-container {
