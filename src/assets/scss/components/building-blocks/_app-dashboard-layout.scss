@@ -87,7 +87,7 @@ $app-dashboard-top-nav-height: 60px;
 }
 
 .app-dashboard-sidebar {
-  background-color: $white;
+  background-color: $royal-blue;
   height: 100%;
   overflow-x: visible;
   overflow-y: auto;
@@ -110,6 +110,7 @@ $app-dashboard-top-nav-height: 60px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+
     .menu > li > a {
       align-items: center;
     }
@@ -140,10 +141,29 @@ $app-dashboard-top-nav-height: 60px;
 }
 
 .app-dashboard-body-content {
+  header {
+    display: block;
+    h4 {
+      margin-bottom: 60px;
+    }
+  }
+
+  .form-holder {
+    width: 100%;
+    max-width: 360px;
+  }
+
   transition: all $offcanvas-transition-length $offcanvas-transition-timing;
   overflow-y: auto;
   flex: 1 1 0;
-  padding: 60px;
+  padding: 20px;
+  @include breakpoint(medium) {
+    padding: 60px;
+  }
+  @include breakpoint(xlarge) {
+    padding: 60px 120px;
+  }
+
   background-color: $white;
 }
 
