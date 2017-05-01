@@ -177,6 +177,7 @@ $app-dashboard-top-nav-height: 60px;
   .form-holder {
     width: 100%;
     max-width: 360px;
+    margin: 0 auto;
     @include breakpoint(large) {
       &:first-child {
         margin-right: 60px;
