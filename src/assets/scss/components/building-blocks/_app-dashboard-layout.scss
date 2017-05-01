@@ -142,15 +142,52 @@ $app-dashboard-top-nav-height: 60px;
 
 .app-dashboard-body-content {
   header {
-    display: block;
+    //display: block;
     h4 {
       margin-bottom: 60px;
+    }
+  }
+
+  .questionnaire-header {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 60px;
+    }
+  }
+
+  .app-dashboard-form-container {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+
+  .app-dashboard-form-container-space-around {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-content: space-around;
     }
   }
 
   .form-holder {
     width: 100%;
     max-width: 360px;
+    @include breakpoint(large) {
+      &:first-child {
+        margin-right: 60px;
+      }
+
+      &:last-child {
+        float: right;
+        align-self: flex-end;
+      }
+    }
   }
 
   .line-divider {
