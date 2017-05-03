@@ -21,9 +21,6 @@ $app-dashboard-top-nav-height: 60px;
   width: 100%;
   flex: 0 0 $app-dashboard-top-nav-height;
 
-  .menu-icon {
-    vertical-align: text-bottom;
-  }
 }
 
 .app-dashboard-logo {
@@ -110,10 +107,37 @@ $app-dashboard-top-nav-height: 60px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    justify-content: space-between;
+
+    .menu > ul {
+      &:last-child {
+        align-self: flex-end;
+      }
+    }
 
     .menu > li > a {
+      padding: 33px 0;
+      flex-direction: column;
+      border-bottom: 1px solid rgba($grey, 0.3);
       align-items: center;
+      color: $white;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      &:hover {
+        border-left: 15px solid $brand-blue;
+        background-color: rgba($dark-blue, 0.20);
+      }
     }
+
+    .menu-icon {
+      height: 25px;
+      margin-bottom: 12px;
+      width: auto;
+    }
+
+
+
   }
   .fa.large {
     font-size: rem-calc(24);
@@ -233,7 +257,7 @@ $app-dashboard-top-nav-height: 60px;
 
 @mixin shrunk-sidebar() {
   .app-dashboard-close-sidebar, .app-dashboard-sidebar-text {
-    display: none;
+    //justify-content: space-between;
   }
 
   .app-dashboard-open-sidebar {
@@ -241,15 +265,15 @@ $app-dashboard-top-nav-height: 60px;
   }
 
   .app-dashboard-sidebar {
-    width: 80px;
+    width: 120px;
     .fa.large {
       width: auto;
     }
   }
 
   .off-canvas-content {
-    margin-left: 80px;
-    width: calc(100% - 80px);
+    margin-left: 120px;
+    width: calc(100% - 120px);
   }
 
   .navigation {
@@ -262,7 +286,8 @@ $app-dashboard-top-nav-height: 60px;
   }
 
   .menu {
-    li {
+
+    li.menu-link {
       &::after {
         display: none;
         opacity: 0;
@@ -275,8 +300,8 @@ $app-dashboard-top-nav-height: 60px;
           margin: 0;
         }
         span {
-          display: none;
-          opacity: 0;
+          // display: none;
+          // opacity: 0;
           transition: opacity 0.5s ease-in-out;
         }
       }
