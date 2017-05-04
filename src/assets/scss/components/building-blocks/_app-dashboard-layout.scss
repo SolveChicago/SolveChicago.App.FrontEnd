@@ -107,6 +107,8 @@ $app-dashboard-top-nav-height: 60px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     .menu > ul {
@@ -128,12 +130,98 @@ $app-dashboard-top-nav-height: 60px;
         border-left: 15px solid $brand-blue;
         background-color: rgba($dark-blue, 0.20);
       }
+
+      &:active {
+        border-left: 15px solid $brand-blue;
+        background-color: rgba($dark-blue, 0.20);
+      }
     }
 
     .menu-icon {
       height: 25px;
       margin-bottom: 12px;
       width: auto;
+    }
+
+    .sub-menu {
+      width: 100%;
+      display: flex;
+      padding-top: 20px;
+      margin: 0;
+      flex-direction: column;
+      border-bottom: 1px solid rgba($grey, 0.3);
+      color: $white;
+      font-size: 14px;
+      text-transform: uppercase;
+      align-self: center;
+
+      ul {
+        list-style-type: none;
+      }
+
+      li {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgba($grey, 0.3);
+
+        &:first-child {
+          padding: 0;
+        }
+
+        .case-manager-profile-picture {
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
+          background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid $white;
+          margin-bottom: 8px;
+          background: $brand-blue url('../img/profile-thumb-example.png') no-repeat center center;
+          background-size: 100% auto;
+        }
+
+        .case-manager-name {
+          text-transform: none;
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        .case-manager-company {
+          text-transform: none;
+          font-size: 12px;
+          margin-bottom: 12px;
+        }
+
+        .sub-menu-icon {
+          width: 25px;
+          height: auto;
+          margin-right: 12px;
+        }
+
+      }
+
+      a {
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: $white;
+        text-transform: none;
+
+        &:hover {
+          border-left: 4px solid $brand-blue;
+          background-color: rgba($dark-blue, 0.20);
+        }
+
+        &:active {
+          border-left: 4px solid $brand-blue;
+          background-color: rgba($dark-blue, 0.20);
+        }
+      }
     }
 
 
