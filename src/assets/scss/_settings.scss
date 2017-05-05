@@ -277,7 +277,6 @@ $accordionmenu-arrow-size: 6px;
 
 // 9. Badge
 // --------
-
 // $badge-background: $primary-color;
 // $badge-color: $white;
 // $badge-color-alt: $black;
@@ -556,7 +555,7 @@ $pagination-arrows: true;
 // ----------------
 $progress-height: rem-calc(12);
 $progress-background: $medium-gray;
-$progress-margin-bottom: $global-margin;
+$progress-margin-bottom: 8px;
 $progress-meter-background: $primary-color;
 $progress-radius: $global-radius;
 
