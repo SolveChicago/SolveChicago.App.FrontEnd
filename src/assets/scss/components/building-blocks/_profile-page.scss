@@ -1,9 +1,8 @@
-.hero-main-profile {
+.user-profile {
     @include breakpoint(medium only) {
         width: calc(100% - 120px);
         margin-left: 120px;
     }
-
     @include breakpoint(large) {
         width: calc(100% - 225px);
         margin-left: 225px;
@@ -13,41 +12,47 @@
     top: 0;
     left: 0;
 
+    /* some shame below, 
+    //for some reason, this makes it scroll with no problem */
+    display: box;
+    /* end of shame*/
+    
+    flex-direction: column;
+    background: $super-light-blue;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.hero-main-profile {
+    clear: both;
     display: flex;
     flex-direction: column;
-
     width: 100%;
-    //height: 400px;
-
     background: $black url('../img/profile-background.png') no-repeat center center;
     background-size: cover;
 
     .profile-image-container {
-
         width: 165px;
         height: 165px;
         margin: 36px 0;
-
         border: 1px solid $white;
         border-radius: 100%;
         background: $brand-blue url('../img/profile-thumb-example.png') no-repeat center center;
         background-size: 100% auto;
-
         align-self: center;
         justify-content: center;
-
     }
 
     .profile-information-container {
         width: 100%;
         padding: 12px 24px;
-        background: rgba($dark-gray, 0.8);
+        background: rgba($dark-gray, .8);
 
         .edit-profile {
             @include breakpoint(small only) {
                 display: flex;
-                justify-content: center;
                 margin-top: 20px;
+                justify-content: center;
             }
             @include breakpoint(medium) {
                 a {
@@ -58,32 +63,68 @@
 
         .profile-wrapper {
             width: 100%;
-            margin: 0 auto;
             max-width: 975px;
-        } 
+            margin: 0 auto;
+        }
     }
 
     .profile-information {
         display: flex;
         flex-direction: column;
-        align-items: center;
         color: $white;
+        align-items: center;
 
         .profile-name {
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         .profile-title {
-          text-transform: uppercase;
-          font-size: 14px;
+            font-size: 14px;
+            text-transform: uppercase;
         }
 
         .profile-description {
-          text-transform: none;
-          font-size: 14px;
+            font-size: 14px;
+            text-transform: none;
         }
     }
+}
 
+.profile-card {
+    width: 100%;
+    max-width: 975px;
+    margin: 20px auto;
+    background: $white;
+    padding: 20px;
+    //margin: 20px 0;
+
+    header {
+        padding-left: 15px;
+        border-bottom: 1px solid $royal-blue;
+        margin-bottom: 12px;
+    }
+
+    p {
+        color: $grey;
+        margin-bottom: 0;
+    }
+
+    .profile-card-header {
+        color: $royal-blue;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .has-space {
+        margin: 12px 0;
+    }
+
+    .profile-card-line-divider {
+        margin: 8px;
+        clear: both;
+        border-bottom: 1px solid $offwhite;
+    }
 }
