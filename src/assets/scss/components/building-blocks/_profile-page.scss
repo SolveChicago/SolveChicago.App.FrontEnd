@@ -1,0 +1,89 @@
+.hero-main-profile {
+    @include breakpoint(medium only) {
+        width: calc(100% - 120px);
+        margin-left: 120px;
+    }
+
+    @include breakpoint(large) {
+        width: calc(100% - 225px);
+        margin-left: 225px;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    //height: 400px;
+
+    background: $black url('../img/profile-background.png') no-repeat center center;
+    background-size: cover;
+
+    .profile-image-container {
+
+        width: 165px;
+        height: 165px;
+        margin: 36px 0;
+
+        border: 1px solid $white;
+        border-radius: 100%;
+        background: $brand-blue url('../img/profile-thumb-example.png') no-repeat center center;
+        background-size: 100% auto;
+
+        align-self: center;
+        justify-content: center;
+
+    }
+
+    .profile-information-container {
+        width: 100%;
+        padding: 12px 24px;
+        background: rgba($dark-gray, 0.8);
+
+        .edit-profile {
+            @include breakpoint(small only) {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            @include breakpoint(medium) {
+                a {
+                    float: right;
+                }
+            }
+        }
+
+        .profile-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 975px;
+        } 
+    }
+
+    .profile-information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $white;
+
+        .profile-name {
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 20px;
+        }
+
+        .profile-title {
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+
+        .profile-description {
+          text-transform: none;
+          font-size: 14px;
+        }
+    }
+
+}
