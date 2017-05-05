@@ -16,7 +16,7 @@
     //for some reason, this makes it scroll with no problem */
     display: box;
     /* end of shame*/
-    
+
     flex-direction: column;
     background: $super-light-blue;
     height: 100%;
@@ -109,6 +109,8 @@
     p {
         color: $grey;
         margin-bottom: 0;
+        display: inline-block;
+        line-height: 1;
     }
 
     .profile-card-header {
@@ -120,6 +122,13 @@
 
     .has-space {
         margin: 12px 0;
+    }
+
+    .profile-icon {
+        width: 14px;
+        height: auto;
+        margin-bottom: 4px;
+        margin-right: 8px;
     }
 
     .profile-card-line-divider {
