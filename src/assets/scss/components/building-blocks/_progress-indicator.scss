@@ -1,5 +1,5 @@
-$progress-indicator-complete: $primary-color;
-$progress-indicator-current: lighten($primary-color, 20%);
+$progress-indicator-complete: $green;
+$progress-indicator-current: $brand-blue;
 $progress-indicator-incomplete: $light-gray;
 $progress-indicator-step-size: 1.5em;
 $progress-indicator-width: 100%;
@@ -7,7 +7,7 @@ $progress-indicator-width: 100%;
 .progress-indicator {
   list-style: none;
   width: $progress-indicator-width;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 0;
   display: table;
   table-layout: fixed;
@@ -16,16 +16,23 @@ $progress-indicator-width: 100%;
     position: relative;
     display: table-cell;
     text-align: center;
-    font-size: 1.5em;
+    font-size: rem-calc(18);
+    font-weight: 800;
 
     span {
+      width: 100%;
       position: absolute;
-      color: $light-gray;
+      color: #BDC3C7;
       transform: translateX(-50%);
-      font-weight: 600;
-      font-size: rem-calc(14);
-      letter-spacing: 0.05px;
+      font-weight: 800;
+      font-size: rem-calc(12);
+      display: inline-block;
       text-transform: uppercase;
+
+      @include breakpoint(small only) {
+        display: none;
+        visibility: 0;
+      }
     }
 
     &::before {
@@ -41,6 +48,7 @@ $progress-indicator-width: 100%;
       border-radius: 100%;
       position: relative;
       z-index: 1000;
+      color: $white;
     }
 
     &::after {
