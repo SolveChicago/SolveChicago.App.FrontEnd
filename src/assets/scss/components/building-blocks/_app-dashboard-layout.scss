@@ -398,6 +398,24 @@ $app-dashboard-top-nav-height: 60px;
   }
 }
 
+.notification-badge {
+  padding: 0 20px;
+}
+
+.current-employer {
+  font-weight: 800;
+  font-size: 14px;
+  color: $white;
+  @include breakpoint(small) {
+    visibility: 0;
+    display: none;
+  }
+  @include breakpoint(medium) {
+    visibility: 1;
+    display: block;
+    padding: 0 20px;
+  }
+}
 // mini sidebar on medium/tablet size
 @include breakpoint(medium only) {
   .app-dashboard.shrink-medium {
