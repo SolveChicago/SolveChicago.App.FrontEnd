@@ -416,6 +416,63 @@ $app-dashboard-top-nav-height: 60px;
     padding: 0 20px;
   }
 }
+
+.add-job {
+  color: $light-blue;
+  padding: 12px 20px;
+  border: 2px solid $light-blue;
+  border-radius: 50px;
+  height: 40px;
+  margin-bottom: -20px;
+  background-color: $white;
+  font-weight: 800;
+
+  &:hover {
+    color: $white;
+    background-color: $brand-blue;
+  }
+
+  .add-job-icon {
+    margin-bottom: 4px;
+    margin-right: 10px;
+  }
+
+  // &:before {
+  //   content: '';
+  //   display: block;
+  //   width: 100%;
+  //   min-width: 1200px;
+  //   height: 2px;
+  //   border: none;
+  //   background-color: red;
+  // }
+}
+
+.has-border {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-bottom: 2px solid $light-blue;
+}
+
+.main-link {
+  margin-top: 8px;
+  margin-right: 20px;
+  font-weight: 800;
+
+  .go-back-icon {
+    margin-bottom: 4px;
+    margin-right: 4px;
+  }
+}
+
+.main-questions {
+  color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 // mini sidebar on medium/tablet size
 @include breakpoint(medium only) {
   .app-dashboard.shrink-medium {
